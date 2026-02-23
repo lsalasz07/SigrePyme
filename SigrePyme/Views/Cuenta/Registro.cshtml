@@ -1,0 +1,109 @@
+@model SigrePyme.ViewModels.RegistroViewModel
+@{
+    ViewData["Title"] = "Registro de Usuario";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="mb-0">
+                        <i class="bi bi-person-plus-fill me-2"></i>Registro de Usuario
+                    </h4>
+                    <small>Sistema SIGRE-PYME</small>
+                </div>
+
+                <div class="card-body p-4">
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        var errores = ViewData.ModelState
+                            .Where(x => x.Key == string.Empty)
+                            .SelectMany(x => x.Value!.Errors)
+                            .Select(e => e.ErrorMessage)
+                            .ToList();
+
+                        if (errores.Any())
+                        {
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong><i class="bi bi-exclamation-triangle me-1"></i>Error al registrar:</strong>
+                                <ul class="mb-0 mt-1">
+                                    @foreach (var error in errores)
+                                    {
+                                        <li>@error</li>
+                                    }
+                                </ul>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        }
+                    }
+
+                    <form asp-action="Registro" asp-controller="Cuenta" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label asp-for="NombreCompleto" class="form-label fw-semibold"></label>
+                            <input asp-for="NombreCompleto" class="form-control" placeholder="Ej. Juan Pérez García" />
+                            <span asp-validation-for="NombreCompleto" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Correo" class="form-label fw-semibold"></label>
+                            <input asp-for="Correo" class="form-control" placeholder="correo@empresa.com" />
+                            <span asp-validation-for="Correo" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Contrasena" class="form-label fw-semibold"></label>
+                            <input asp-for="Contrasena" class="form-control" placeholder="Mínimo 6 caracteres" />
+                            <span asp-validation-for="Contrasena" class="text-danger small"></span>
+                            <div class="form-text text-muted">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Debe tener mayúscula, minúscula, número y carácter especial. Ej: <strong>Admin123!</strong>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ConfirmarContrasena" class="form-label fw-semibold"></label>
+                            <input asp-for="ConfirmarContrasena" class="form-control" placeholder="Repita la contraseña" />
+                            <span asp-validation-for="ConfirmarContrasena" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Rol" class="form-label fw-semibold"></label>
+                            <select asp-for="Rol" class="form-select">
+                                <option value="">-- Seleccione un rol --</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Almacenista">Almacenista</option>
+                                <option value="Gerente">Gerente</option>
+                            </select>
+                            <span asp-validation-for="Rol" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-person-check me-2"></i>Registrarse
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="card-footer text-center text-muted py-3">
+                    ¿Ya tiene una cuenta?
+                    <a asp-action="Login" asp-controller="Cuenta" class="text-decoration-none fw-semibold">
+                        Iniciar Sesión
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

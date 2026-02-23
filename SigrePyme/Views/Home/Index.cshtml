@@ -1,0 +1,90 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@if (TempData["Exito"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>@TempData["Exito"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold text-primary">
+        Sistema SIGRE-PYME
+    </h1>
+    <p class="lead text-muted mt-3 mb-4">
+        Gestión integral de inventario, ventas y recursos para pequeñas y medianas empresas.
+    </p>
+
+    @if (User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        <div class="mb-4">
+            <span class="fs-5">Bienvenido/a, <strong>@User.Identity.Name</strong></span>
+        </div>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg px-5">
+            <i class="bi bi-grid-fill me-2"></i>Ir al Panel Principal
+        </a>
+    }
+    else
+    {
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a asp-controller="Cuenta" asp-action="Login" class="btn btn-primary btn-lg px-5">
+                <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+            </a>
+            <a asp-controller="Cuenta" asp-action="Registro" class="btn btn-outline-primary btn-lg px-5">
+                <i class="bi bi-person-plus me-2"></i>Registrarse
+            </a>
+        </div>
+    }
+</div>
+
+<hr class="my-4" />
+
+<div class="row g-4 text-center mb-5">
+    <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body py-4">
+                <i class="bi bi-box-seam text-primary" style="font-size:2.5rem"></i>
+                <h5 class="card-title mt-3">Inventario</h5>
+                <p class="card-text text-muted small">
+                    Control de productos, entradas, salidas y alertas de stock bajo.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body py-4">
+                <i class="bi bi-cart-check text-success" style="font-size:2.5rem"></i>
+                <h5 class="card-title mt-3">Ventas</h5>
+                <p class="card-text text-muted small">
+                    Creación de órdenes de pedido con validación de stock en tiempo real.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body py-4">
+                <i class="bi bi-people text-warning" style="font-size:2.5rem"></i>
+                <h5 class="card-title mt-3">Usuarios</h5>
+                <p class="card-text text-muted small">
+                    Gestión de accesos por roles: Administrador, Vendedor, Almacenista y Gerente.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body py-4">
+                <i class="bi bi-bar-chart-line text-danger" style="font-size:2.5rem"></i>
+                <h5 class="card-title mt-3">Reportes</h5>
+                <p class="card-text text-muted small">
+                    Dashboard con KPIs, historial de transacciones y productos más vendidos.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

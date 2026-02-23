@@ -1,0 +1,86 @@
+@model SigrePyme.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="mb-0">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+                    </h4>
+                    <small>Sistema SIGRE-PYME</small>
+                </div>
+
+                <div class="card-body p-4">
+
+                    
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <asp-validation-summary asp-validation-summary="ModelOnly" class="mb-0"></asp-validation-summary>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    
+                    @if (TempData["Exito"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["Exito"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form asp-action="Login" asp-controller="Cuenta" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                        
+                        <div class="mb-3">
+                            <label asp-for="Correo" class="form-label fw-semibold"></label>
+                            <input asp-for="Correo" class="form-control" placeholder="correo@empresa.com" />
+                            <span asp-validation-for="Correo" class="text-danger small"></span>
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label asp-for="Contrasena" class="form-label fw-semibold"></label>
+                            <input asp-for="Contrasena" class="form-control" placeholder="Su contraseña" />
+                            <span asp-validation-for="Contrasena" class="text-danger small"></span>
+                        </div>
+
+                        
+                        <div class="mb-4 form-check">
+                            <input asp-for="Recordarme" class="form-check-input" />
+                            <label asp-for="Recordarme" class="form-check-label">Recordarme</label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Ingresar
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="card-footer text-center text-muted py-3">
+                    ¿No tiene una cuenta?
+                    <a asp-action="Registro" asp-controller="Cuenta" class="text-decoration-none fw-semibold">
+                        Registrarse
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    
+    <partial name="_ValidationScriptsPartial" />
+}
