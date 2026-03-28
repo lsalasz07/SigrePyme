@@ -1,0 +1,202 @@
+﻿@model IEnumerable<SigrePyme.Models.Producto>
+@{
+    ViewData["Title"] = "Catálogo de Productos";
+}
+
+<div class="container-fluid mt-4">
+
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h2 class="mb-0"><i class="bi bi-box-seam me-2"></i>Catálogo y Almacén</h2>
+            <small class="text-muted">Gestión de productos e inventario</small>
+        </div>
+        @if (User.IsInRole("Administrador") || User.IsInRole("Almacenista"))
+        {
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i>Nuevo Producto
+            </a>
+        }
+    </div>
+
+
+    @if (TempData["Exito"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <i class="bi bi-check-circle me-2"></i>@TempData["Exito"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="bi bi-exclamation-triangle me-2"></i>@TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+
+    @if (ViewBag.CantidadAlertas > 0)
+    {
+        <div class="alert alert-warning d-flex align-items-center mb-3">
+            <i class="bi bi-exclamation-triangle-fill fs-5 me-2"></i>
+            <span>
+                <strong>@ViewBag.CantidadAlertas producto(s)</strong> con stock por debajo del umbral mínimo.
+            </span>
+        </div>
+    }
+
+
+    <div class="card shadow-sm mb-3">
+        <div class="card-body py-2">
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                <input type="text" id="buscador" class="form-control"
+                       placeholder="Buscar por nombre o SKU..." autocomplete="off" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="tablaProductos">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>SKU</th>
+                            <th>Nombre</th>
+                            <th class="text-end">P. Costo</th>
+                            <th class="text-end">P. Venta</th>
+                            <th class="text-center">Stock</th>
+                            <th class="text-center">Estado</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (!Model.Any())
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center text-muted py-5">
+                                    <i class="bi bi-inbox fs-2 d-block mb-2"></i>
+                                    No hay productos registrados en el catálogo.
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var p in Model)
+                            {
+                                <tr class="@(p.TieneStockBajo ? "table-warning" : "")">
+                                    <td><code class="text-primary fw-semibold">@p.SKU</code></td>
+                                    <td>
+                                        <strong>@p.Nombre</strong>
+                                        @if (!string.IsNullOrEmpty(p.Descripcion))
+                                        {
+                                            <br />
+                                
+                                            <small class="text-muted">@p.Descripcion</small>
+                                        }
+                                    </td>
+                                    <td class="text-end">₡@p.PrecioCosto.ToString("N2")</td>
+                                    <td class="text-end">₡@p.PrecioVenta.ToString("N2")</td>
+                                    <td class="text-center">
+                                        <span class="badge @(p.TieneStockBajo ? "bg-danger" : "bg-success") fs-6">
+                                            @p.StockActual
+                                        </span>
+                                        @if (p.TieneStockBajo)
+                                        {
+                                            <br />
+                                
+                                            <small class="text-danger">Mín: @p.StockMinimo</small>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        @if (p.Activo)
+                                        {
+                                            <span class="badge bg-success">Activo</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Inactivo</span>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-sm">
+                                            <a asp-action="Details" asp-route-id="@p.Id"
+                                               class="btn btn-outline-info" title="Ver detalle">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            @if (User.IsInRole("Administrador") || User.IsInRole("Almacenista"))
+                                            {
+                                                <a asp-action="Edit" asp-route-id="@p.Id"
+                                                   class="btn btn-outline-warning" title="Editar">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <a asp-action="RegistrarMovimiento" asp-route-id="@p.Id"
+                                                   class="btn btn-outline-primary" title="Registrar movimiento">
+                                                    <i class="bi bi-arrow-left-right"></i>
+                                                </a>
+                                            }
+                                            <a asp-action="Transacciones" asp-route-id="@p.Id"
+                                               class="btn btn-outline-secondary" title="Historial">
+                                                <i class="bi bi-clock-history"></i>
+                                            </a>
+                                            @if (User.IsInRole("Administrador"))
+                                            {
+                                                <a asp-action="Delete" asp-route-id="@p.Id"
+                                                   class="btn btn-outline-danger" title="Eliminar">
+                                                    <i class="bi bi-trash"></i>
+                                                </a>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const buscador = document.getElementById('buscador');
+        const tabla    = document.getElementById('tablaProductos').querySelector('tbody');
+
+        buscador.addEventListener('input', function () {
+            const q = this.value.trim();
+            if (q.length < 2) { location.reload(); return; }
+
+            fetch(`/Producto/BuscarJson?q=${encodeURIComponent(q)}`)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        tabla.innerHTML = `<tr><td colspan="7" class="text-center text-muted py-4">
+                            Sin resultados para "<strong>${q}</strong>".</td></tr>`;
+                        return;
+                    }
+                    tabla.innerHTML = data.map(p => `
+                        <tr>
+                            <td><code class="text-primary fw-semibold">${p.sku}</code></td>
+                            <td><strong>${p.nombre}</strong></td>
+                            <td class="text-end">—</td>
+                            <td class="text-end">₡${parseFloat(p.precioVenta).toFixed(2)}</td>
+                            <td class="text-center">
+                                <span class="badge ${p.stockActual <= 5 ? 'bg-danger' : 'bg-success'} fs-6">
+                                    ${p.stockActual}
+                                </span>
+                            </td>
+                            <td class="text-center"><span class="badge bg-success">Activo</span></td>
+                            <td class="text-center">
+                                <a href="/Producto/Details/${p.id}" class="btn btn-sm btn-outline-info">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                            </td>
+                        </tr>`).join('');
+                });
+        });
+    </script>
+}

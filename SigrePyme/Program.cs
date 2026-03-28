@@ -1,62 +1,87 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SigrePyme.Data;
+using SigrePyme.Helpers;
 using SigrePyme.Models;
+using SigrePyme.Repositories;
+using SigrePyme.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var cadenaConexion = builder.Configuration.GetConnectionString("ConexionPredeterminada")
-    ?? throw new InvalidOperationException("No se encontró la cadena de conexión 'ConexionPredeterminada'.");
+// =============================================
+// BASE DE DATOS
+// =============================================
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
-    opciones.UseMySql(cadenaConexion, ServerVersion.AutoDetect(cadenaConexion))
-);
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        connectionString,
+        new MySqlServerVersion(new Version(8, 0, 0))
+    ));
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(opciones =>
+// =============================================
+// ASP.NET CORE IDENTITY
+// =============================================
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
-    opciones.Password.RequiredLength = 6;
-    opciones.Password.RequireDigit = true;
-    opciones.Password.RequireUppercase = true;
-    opciones.Password.RequireLowercase = true;
-    opciones.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequiredLength = 6;
 
-    opciones.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-    opciones.Lockout.MaxFailedAccessAttempts = 5;
-    opciones.Lockout.AllowedForNewUsers = true;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
 
-    opciones.User.RequireUniqueEmail = true;
+    options.User.RequireUniqueEmail = true;
 })
-.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
-builder.Services.ConfigureApplicationCookie(opciones =>
+builder.Services.ConfigureApplicationCookie(options =>
 {
-    opciones.LoginPath = "/Cuenta/Login";
-    opciones.LogoutPath = "/Cuenta/CerrarSesion";
-    opciones.AccessDeniedPath = "/Cuenta/AccesoDenegado";
-    opciones.ExpireTimeSpan = TimeSpan.FromHours(8);
-    opciones.SlidingExpiration = true;
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    options.AccessDeniedPath = "/Account/AccesoDenegado";
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromHours(8);
 });
 
+// =============================================
+// REPOSITORIOS
+// =============================================
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<ITransaccionRepository, TransaccionRepository>();
+
+// =============================================
+// SERVICIOS
+// =============================================
+builder.Services.AddScoped<IProductoService, ProductoService>();
+
+// =============================================
+// MVC
+// =============================================
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// =============================================
+// SEED
+// =============================================
 using (var scope = app.Services.CreateScope())
 {
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    string[] roles = { "Administrador", "Vendedor", "Almacenista", "Gerente" };
+    await db.Database.MigrateAsync();
 
-    foreach (var rol in roles)
-    {
-        if (!await roleManager.RoleExistsAsync(rol))
-        {
-            await roleManager.CreateAsync(new IdentityRole(rol));
-        }
-    }
+    await DbInitializer.InicializarAsync(userManager, roleManager);
 }
 
+// =============================================
+// PIPELINE HTTP
+// =============================================
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

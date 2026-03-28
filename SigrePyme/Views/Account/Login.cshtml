@@ -1,0 +1,114 @@
+﻿@model SigrePyme.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+    bool hayUsuarios = ViewBag.HayUsuarios ?? true;
+}
+
+<div class="auth-wrapper">
+    <div class="auth-card">
+
+        <div class="auth-header">
+            <h1 class="auth-title">SIGRE-PYME</h1>
+            <p class="auth-subtitle">Sistema Integral de Gestión de Recursos</p>
+        </div>
+
+        <div class="auth-body">
+
+            @if (!hayUsuarios)
+            {
+                <div class="alert alert-warning d-flex gap-2 mb-4">
+                    <i class="bi bi-exclamation-triangle-fill mt-1 flex-shrink-0"></i>
+                    <div>
+                        <strong>Sin usuarios registrados.</strong><br />
+                        Crea la cuenta del Administrador principal para comenzar.
+                    </div>
+                </div>
+            }
+
+            @if (TempData["Exito"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show">
+                    <i class="bi bi-check-circle me-2"></i>@TempData["Exito"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <h2 class="form-section-title">Iniciar Sesión</h2>
+
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <form asp-action="Login" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input asp-for="Email" class="form-control"
+                               placeholder="correo@empresa.com" autocomplete="username" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input asp-for="Password" class="form-control"
+                               placeholder="••••••••" autocomplete="current-password" id="passLogin" />
+                        <button class="btn btn-outline-secondary" type="button"
+                                onclick="togglePassword()" title="Mostrar/ocultar contraseña">
+                            <i class="bi bi-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <div class="form-check mb-4">
+                    <input asp-for="RememberMe" class="form-check-input" />
+                    <label asp-for="RememberMe" class="form-check-label">Recordarme</label>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Ingresar
+                    </button>
+                </div>
+            </form>
+
+            <div class="d-flex align-items-center my-4">
+                <hr class="flex-grow-1" />
+                <span class="px-3 text-muted small">¿No tienes cuenta?</span>
+                <hr class="flex-grow-1" />
+            </div>
+
+            <div class="d-grid">
+                <a asp-action="Register" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-person-plus me-2"></i>Registrarse
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('passLogin');
+            const icon  = document.getElementById('eyeIcon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'bi bi-eye-slash';
+            } else {
+                input.type = 'password';
+                icon.className = 'bi bi-eye';
+            }
+        }
+    </script>
+}

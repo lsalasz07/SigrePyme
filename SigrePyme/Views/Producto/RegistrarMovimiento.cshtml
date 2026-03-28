@@ -1,0 +1,125 @@
+﻿@model SigrePyme.Models.TransaccionViewModel
+@{
+    ViewData["Title"] = "Registrar Movimiento";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Catálogo</a></li>
+                    <li class="breadcrumb-item active">Registrar Movimiento</li>
+                </ol>
+            </nav>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-arrow-left-right me-2"></i>Registrar Movimiento de Inventario
+                    </h5>
+                </div>
+
+                <div class="card-body p-4">
+
+
+                    <div class="card bg-light mb-4">
+                        <div class="card-body py-2">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <p class="mb-0 text-muted small">Producto</p>
+                                    <p class="mb-0 fw-bold fs-5">@Model.NombreProducto</p>
+                                </div>
+                                <div class="col-auto">
+                                    <p class="mb-0 text-muted small">Stock actual</p>
+                                    <span class="badge bg-primary fs-5 px-3">@Model.StockActual</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form asp-action="RegistrarMovimiento" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="ProductoId" />
+                        <input type="hidden" asp-for="NombreProducto" />
+                        <input type="hidden" asp-for="StockActual" />
+
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Tipo" class="form-label fw-semibold"></label>
+                            <select asp-for="Tipo" asp-items="ViewBag.Tipos" class="form-select form-select-lg" id="tipoSelect">
+                                <option value="">-- Seleccione el tipo de movimiento --</option>
+                            </select>
+                            <span asp-validation-for="Tipo" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Cantidad" class="form-label fw-semibold"></label>
+                            <input asp-for="Cantidad" class="form-control form-control-lg"
+                                   type="number" min="1" id="cantidadInput" />
+                            <span asp-validation-for="Cantidad" class="text-danger small"></span>
+
+
+                            <div id="stockPreview" class="mt-2 d-none">
+                                <small class="text-muted">Stock resultante estimado: </small>
+                                <strong id="stockResultado" class="fs-5"></strong>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Observacion" class="form-label fw-semibold"></label>
+                            <textarea asp-for="Observacion" class="form-control" rows="2"
+                                      placeholder="Ej: Compra a proveedor #012, factura 456..."></textarea>
+                            <span asp-validation-for="Observacion" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2">
+                            <a asp-action="Transacciones" asp-route-id="@Model.ProductoId"
+                               class="btn btn-secondary">
+                                <i class="bi bi-x-lg me-1"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-check-lg me-1"></i>Confirmar Movimiento
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        const stockActual  = @Model.StockActual;
+        const tipoSelect   = document.getElementById('tipoSelect');
+        const cantidadInput = document.getElementById('cantidadInput');
+        const preview      = document.getElementById('stockPreview');
+        const resultado    = document.getElementById('stockResultado');
+
+        function actualizarPreview() {
+            const tipo     = parseInt(tipoSelect.value);
+            const cantidad = parseInt(cantidadInput.value) || 0;
+            if (!tipo || !cantidad) { preview.classList.add('d-none'); return; }
+
+            let stockFinal;
+            if (tipo === 1) {   // Entrada
+                stockFinal = stockActual + cantidad;
+                resultado.className = 'fs-5 text-success';
+            } else {            // Salida / Ajuste
+                stockFinal = stockActual - cantidad;
+                resultado.className = stockFinal < 0 ? 'fs-5 text-danger' : 'fs-5 text-warning';
+            }
+            resultado.textContent = stockFinal + ' unidades';
+            preview.classList.remove('d-none');
+        }
+
+        tipoSelect.addEventListener('change', actualizarPreview);
+        cantidadInput.addEventListener('input', actualizarPreview);
+    </script>
+}

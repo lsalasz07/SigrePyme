@@ -1,0 +1,113 @@
+﻿@model SigrePyme.Models.ProductoViewModel
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Catálogo</a></li>
+                    <li class="breadcrumb-item active">Editar Producto</li>
+                </ol>
+            </nav>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0"><i class="bi bi-pencil-square me-2"></i>Editar Producto</h5>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="Edit" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-4">
+                                <label asp-for="SKU" class="form-label fw-semibold"></label>
+                                <input asp-for="SKU" class="form-control text-uppercase" />
+                                <span asp-validation-for="SKU" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-8">
+                                <label asp-for="Nombre" class="form-label fw-semibold"></label>
+                                <input asp-for="Nombre" class="form-control" />
+                                <span asp-validation-for="Nombre" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="Descripcion" class="form-label fw-semibold"></label>
+                                <textarea asp-for="Descripcion" class="form-control" rows="2"></textarea>
+                                <span asp-validation-for="Descripcion" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="PrecioCosto" class="form-label fw-semibold"></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">₡</span>
+                                    <input asp-for="PrecioCosto" class="form-control" type="number" step="0.01" min="0" />
+                                </div>
+                                <span asp-validation-for="PrecioCosto" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="PrecioVenta" class="form-label fw-semibold"></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">₡</span>
+                                    <input asp-for="PrecioVenta" class="form-control" type="number" step="0.01" min="0" />
+                                </div>
+                                <span asp-validation-for="PrecioVenta" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="StockMinimo" class="form-label fw-semibold"></label>
+                                <input asp-for="StockMinimo" class="form-control" type="number" min="1" />
+                                <span asp-validation-for="StockMinimo" class="text-danger small"></span>
+                                <div class="form-text">Para cambiar el stock use "Registrar Movimiento".</div>
+                            </div>
+
+                            <div class="col-md-6 d-flex align-items-center pt-4">
+                                <div class="form-check form-switch">
+                                    <input asp-for="Activo" class="form-check-input" role="switch" />
+                                    <label asp-for="Activo" class="form-check-label fw-semibold">
+                                        Producto Activo
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-info py-2 mb-0">
+                                    <i class="bi bi-info-circle me-1"></i>
+                                    El <strong>stock actual</strong> solo puede modificarse mediante el registro de
+                                    entradas y salidas en "Registrar Movimiento" para mantener la trazabilidad.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="d-flex justify-content-end gap-2">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-x-lg me-1"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="bi bi-floppy me-1"></i>Guardar Cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

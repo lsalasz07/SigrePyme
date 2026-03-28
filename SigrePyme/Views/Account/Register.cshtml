@@ -1,0 +1,132 @@
+﻿@model SigrePyme.Models.RegisterViewModel
+@{
+    bool esPrimero = ViewBag.EsPrimerUsuario ?? false;
+    ViewData["Title"] = esPrimero ? "Crear cuenta de Administrador" : "Crear cuenta";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+
+<div class="auth-wrapper" style="max-width:480px;">
+    <div class="auth-card">
+
+        <div class="auth-header">
+            <h1 class="auth-title">SIGRE-PYME</h1>
+            <p class="auth-subtitle">
+                @(esPrimero ? "Configuración inicial del sistema" : "Crear nueva cuenta")
+            </p>
+        </div>
+
+        <div class="auth-body">
+
+            @if (esPrimero)
+            {
+                <div class="alert alert-info d-flex gap-2 mb-4">
+                    <i class="bi bi-shield-lock-fill mt-1 flex-shrink-0"></i>
+                    <div>
+                        <strong>Primer acceso.</strong>
+                        Esta cuenta tendrá permisos de <strong>Administrador</strong> total sobre el sistema.
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-secondary d-flex gap-2 mb-4">
+                    <i class="bi bi-info-circle mt-1 flex-shrink-0"></i>
+                    <div>
+                        Tu cuenta se creará con rol <strong>Vendedor</strong>.
+                        Un administrador puede cambiar tu rol posteriormente.
+                    </div>
+                </div>
+            }
+
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <form asp-action="Register" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="NombreCompleto" class="form-label fw-semibold"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input asp-for="NombreCompleto" class="form-control"
+                               placeholder="Nombre completo" />
+                    </div>
+                    <span asp-validation-for="NombreCompleto" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input asp-for="Email" class="form-control"
+                               placeholder="correo@empresa.com" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label fw-semibold"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input asp-for="Password" class="form-control"
+                               placeholder="Mínimo 6 caracteres" id="passReg" />
+                        <button class="btn btn-outline-secondary" type="button"
+                                onclick="togglePass('passReg','eyeReg')">
+                            <i class="bi bi-eye" id="eyeReg"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="ConfirmPassword" class="form-label fw-semibold"></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                        <input asp-for="ConfirmPassword" class="form-control"
+                               placeholder="Repita la contraseña" id="passConf" />
+                        <button class="btn btn-outline-secondary" type="button"
+                                onclick="togglePass('passConf','eyeConf')">
+                            <i class="bi bi-eye" id="eyeConf"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                </div>
+
+                <input type="hidden" asp-for="Rol"
+                       value="@(esPrimero ? "Administrador" : "Vendedor")" />
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-person-check me-2"></i>
+                        @(esPrimero ? "Crear cuenta y entrar" : "Crear mi cuenta")
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <a asp-action="Login" class="text-muted small">
+                        <i class="bi bi-arrow-left me-1"></i>Volver al inicio de sesión
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function togglePass(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon  = document.getElementById(iconId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'bi bi-eye-slash';
+            } else {
+                input.type = 'password';
+                icon.className = 'bi bi-eye';
+            }
+        }
+    </script>
+}
