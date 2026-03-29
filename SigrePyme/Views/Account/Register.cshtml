@@ -32,7 +32,7 @@
                 <div class="alert alert-secondary d-flex gap-2 mb-4">
                     <i class="bi bi-info-circle mt-1 flex-shrink-0"></i>
                     <div>
-                        Tu cuenta se creará con rol <strong>Vendedor</strong>.
+                        Tu cuenta se creará con rol <strong>Cliente</strong>.
                         Un administrador puede cambiar tu rol posteriormente.
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                 </div>
 
                 <input type="hidden" asp-for="Rol"
-                       value="@(esPrimero ? "Administrador" : "Vendedor")" />
+                       value="@(esPrimero ? "Administrador" : "Cliente")" />
 
                 <div class="d-grid mb-3">
                     <button type="submit" class="btn btn-primary btn-lg">

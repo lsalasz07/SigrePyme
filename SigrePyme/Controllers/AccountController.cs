@@ -80,7 +80,7 @@ namespace SigrePyme.Controllers
             bool esPrimerUsuario = !_userManager.Users.Any();
             ViewBag.EsPrimerUsuario = esPrimerUsuario;
 
-            model.Rol = esPrimerUsuario ? Roles.Administrador : Roles.Vendedor;
+            model.Rol = esPrimerUsuario ? Roles.Administrador : Roles.Cliente;
 
             if (!ModelState.IsValid)
             {
@@ -108,7 +108,7 @@ namespace SigrePyme.Controllers
 
                 TempData["Exito"] = esPrimerUsuario
                     ? $"Bienvenido, {user.NombreCompleto}! Cuenta de Administrador creada."
-                    : $"Bienvenido, {user.NombreCompleto}! Tu cuenta fue creada con rol Vendedor.";
+                    : $"Bienvenido, {user.NombreCompleto}! Tu cuenta fue creada con rol Cliente.";
 
                 return RedirectToAction("Index", "Home");
             }

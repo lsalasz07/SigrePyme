@@ -52,11 +52,13 @@ builder.Services.ConfigureApplicationCookie(options =>
 // =============================================
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<ITransaccionRepository, TransaccionRepository>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
 // =============================================
 // SERVICIOS
 // =============================================
 builder.Services.AddScoped<IProductoService, ProductoService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 // =============================================
 // MVC
@@ -75,7 +77,6 @@ using (var scope = app.Services.CreateScope())
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
     await db.Database.MigrateAsync();
-
     await DbInitializer.InicializarAsync(userManager, roleManager);
 }
 

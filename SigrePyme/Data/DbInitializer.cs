@@ -9,7 +9,7 @@ namespace SigrePyme.Helpers
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager)
         {
-            string[] roles = { "Administrador", "Gerente", "Vendedor", "Almacenista" };
+            string[] roles = { "Administrador", "Gerente", "Vendedor", "Almacenista", "Cliente" };
 
             foreach (var rol in roles)
             {
@@ -32,7 +32,6 @@ namespace SigrePyme.Helpers
                 };
 
                 var result = await userManager.CreateAsync(admin, adminPassword);
-
                 if (result.Succeeded)
                     await userManager.AddToRoleAsync(admin, "Administrador");
             }

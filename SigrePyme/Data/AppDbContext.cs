@@ -13,6 +13,7 @@ namespace SigrePyme.Data
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<TransaccionInventario> TransaccionesInventario { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -21,7 +22,6 @@ namespace SigrePyme.Data
             builder.Entity<Producto>(entity =>
             {
                 entity.HasIndex(p => p.SKU).IsUnique();
-
                 entity.Property(p => p.PrecioCosto).HasColumnType("decimal(18,2)");
                 entity.Property(p => p.PrecioVenta).HasColumnType("decimal(18,2)");
             });
@@ -32,6 +32,11 @@ namespace SigrePyme.Data
                       .WithMany(p => p.Transacciones)
                       .HasForeignKey(t => t.ProductoId)
                       .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<Cliente>(entity =>
+            {
+                entity.HasIndex(c => c.Email).IsUnique();
             });
         }
     }

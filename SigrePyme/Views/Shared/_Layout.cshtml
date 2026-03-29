@@ -10,13 +10,27 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
     <style>
-        :root { --bs-primary: #1a3a5c; }
-        body  { background-color: #f4f6f9; }
+        :root {
+            --bs-primary: #1a3a5c;
+        }
 
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; }
-        .navbar { background: linear-gradient(135deg, #1a3a5c, #2e6da4) !important; }
+        body {
+            background-color: #f4f6f9;
+        }
 
-        .nav-link.active { background: rgba(255,255,255,.15); border-radius: 6px; }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #1a3a5c, #2e6da4) !important;
+        }
+
+        .nav-link.active {
+            background: rgba(255,255,255,.15);
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -42,6 +56,11 @@
 
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Cliente" asp-action="Index">
+                                <i class="bi bi-people me-1"></i>Clientes
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Producto" asp-action="Index">
                                 <i class="bi bi-box-seam me-1"></i>Catálogo
