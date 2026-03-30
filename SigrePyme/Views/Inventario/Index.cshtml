@@ -1,0 +1,23 @@
+@model List<Producto>
+
+    <h2>Inventario</h2>
+
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+        </tr>
+
+        @foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Nombre</td>
+            <td>@item.Stock</td>
+            <td>
+                <a href="/Inventario/Entrada/@item.Id">Entrada</a> |
+                <a href="/Inventario/Salida/@item.Id">Salida</a>
+            </td>
+        </tr>
+}
+    </table>
