@@ -22,7 +22,9 @@ namespace SigrePyme.Data
                 ServerVersion.AutoDetect(cadenaConexion)
             );
 
+
             return new ApplicationDbContext(optionsBuilder.Options);
         }
+
     }
 }

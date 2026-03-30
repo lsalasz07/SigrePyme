@@ -3,8 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\views\\inventario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\inventario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\views\\inventario\\salida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\inventario\\salida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\views\\inventario\\entrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\inventario\\entrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\views\\cliente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\cliente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\movimientoinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\movimientoinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\transaccioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\transaccioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\views\\producto\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120822_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SigrePyme\\Migrations\\20260330120822_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,28 +119,8 @@
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,20 +143,16 @@
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\models\\transaccioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\models\\transaccioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\viewmodels\\registroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\viewmodels\\registroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\constants\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\constants\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|c:\\users\\nigel\\source\\repos\\tarea2\\sigrepyme\\sigrepyme\\migrations\\20260330120822_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18F27BD-E319-1315-49C5-05C8EE5CCA27}|SigrePyme\\SigrePyme.csproj|solutionrelative:sigrepyme\\migrations\\20260330120822_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,362 +162,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\ProductoService.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Services\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\ProductoService.cs",
-              "RelativeToolTip": "SigrePyme\\Services\\ProductoService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA0wKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:08:38.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Details.cshtml",
-              "RelativeDocumentMoniker": "SigrePyme\\Views\\Producto\\Details.cshtml",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Details.cshtml",
-              "RelativeToolTip": "SigrePyme\\Views\\Producto\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAMwE0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-30T12:14:00.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "SigrePyme\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:46:25.324Z",
+              "WhenOpened": "2026-03-30T21:27:23.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CuentaController.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\CuentaController.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\CuentaController.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\CuentaController.cs",
-              "RelativeToolTip": "SigrePyme\\Controllers\\CuentaController.cs",
+              "Title": "Salida.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Salida.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Inventario\\Salida.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Salida.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Inventario\\Salida.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:43:43.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "SigrePyme\\Controllers\\ProductoController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAqwHsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:43:44.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "SigrePyme\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:43:40.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Program.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Program.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Program.cs*",
-              "RelativeToolTip": "SigrePyme\\Program.cs*",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAqwGgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:31:04.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\IProductoService.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Services\\IProductoService.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\IProductoService.cs",
-              "RelativeToolTip": "SigrePyme\\Services\\IProductoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:09:00.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\IProductoRepository.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Repositories\\IProductoRepository.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\IProductoRepository.cs",
-              "RelativeToolTip": "SigrePyme\\Repositories\\IProductoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:10:30.216Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T21:27:14.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "SigrePyme\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:43:42.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\ProductoRepository.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Repositories\\ProductoRepository.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\ProductoRepository.cs",
-              "RelativeToolTip": "SigrePyme\\Repositories\\ProductoRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:11:43.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Index.cshtml",
-              "RelativeDocumentMoniker": "SigrePyme\\Views\\Producto\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Index.cshtml",
-              "RelativeToolTip": "SigrePyme\\Views\\Producto\\Index.cshtml",
+              "Title": "Entrada.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Entrada.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Inventario\\Entrada.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Entrada.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Inventario\\Entrada.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-30T14:18:06.881Z",
+              "WhenOpened": "2026-03-30T21:27:12.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20260330120656_AddFechaCreacion.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
-              "RelativeToolTip": "SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T12:06:56.429Z",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cliente\\Create.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Cliente\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cliente\\Create.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Cliente\\Create.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T21:26:45.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Index.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Inventario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Inventario\\Index.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Inventario\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T20:51:47.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "SigrePyme\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "SigrePyme\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T11:46:32.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Data\\DbInitializer.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "SigrePyme\\Data\\DbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T12:03:04.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20260330120822_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
-              "RelativeToolTip": "SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T12:08:22.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "SigrePyme\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:46:10.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SigrePyme\\Controllers\\HomeController.cs",
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\Producto.cs",
+              "RelativeToolTip": "SigrePyme\\Models\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T12:02:58.692Z",
+              "WhenOpened": "2026-03-30T20:45:15.778Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ApplicationDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContextFactory.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Data\\ApplicationDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContextFactory.cs",
-              "RelativeToolTip": "SigrePyme\\Data\\ApplicationDbContextFactory.cs",
+              "DocumentIndex": 6,
+              "Title": "InventarioController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\InventarioController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\InventarioController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\InventarioController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\InventarioController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T20:36:50.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Program.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Program.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Program.cs",
+              "RelativeToolTip": "SigrePyme\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:46:34.06Z",
+              "WhenOpened": "2026-03-30T11:31:04.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.json",
-              "RelativeDocumentMoniker": "SigrePyme\\appsettings.json",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.json",
-              "RelativeToolTip": "SigrePyme\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-30T11:38:26.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "SigrePyme\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.Development.json",
-              "RelativeToolTip": "SigrePyme\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-30T11:38:13.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cuenta\\Login.cshtml",
-              "RelativeDocumentMoniker": "SigrePyme\\Views\\Cuenta\\Login.cshtml",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cuenta\\Login.cshtml",
-              "RelativeToolTip": "SigrePyme\\Views\\Cuenta\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-30T11:28:32.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "SigrePyme\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "SigrePyme\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-30T11:26:17.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AccountViewModels.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\AccountViewModels.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Models\\AccountViewModels.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\AccountViewModels.cs",
-              "RelativeToolTip": "SigrePyme\\Models\\AccountViewModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:24:30.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "SigrePyme\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:45:17.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "SigrePyme\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "SigrePyme\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:20:48.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 12,
               "Title": "ProductoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ProductoViewModel.cs",
               "RelativeDocumentMoniker": "SigrePyme\\Models\\ProductoViewModel.cs",
               "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ProductoViewModel.cs",
               "RelativeToolTip": "SigrePyme\\Models\\ProductoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T11:20:47.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 14,
               "Title": "TransaccionInventario.cs",
               "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\TransaccionInventario.cs",
               "RelativeDocumentMoniker": "SigrePyme\\Models\\TransaccionInventario.cs",
@@ -498,7 +309,312 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.json",
+              "RelativeDocumentMoniker": "SigrePyme\\appsettings.json",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.json",
+              "RelativeToolTip": "SigrePyme\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T11:38:26.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "SigrePyme\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:46:25.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MovimientoInventario.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\MovimientoInventario.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Models\\MovimientoInventario.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\MovimientoInventario.cs",
+              "RelativeToolTip": "SigrePyme\\Models\\MovimientoInventario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T20:45:27.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "SigrePyme\\Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:46:34.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:43:40.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\IProductoRepository.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Repositories\\IProductoRepository.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\IProductoRepository.cs",
+              "RelativeToolTip": "SigrePyme\\Repositories\\IProductoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T14:10:30.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\IProductoService.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Services\\IProductoService.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\IProductoService.cs",
+              "RelativeToolTip": "SigrePyme\\Services\\IProductoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T14:09:00.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAqwHsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:43:44.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CuentaController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\CuentaController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\CuentaController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\CuentaController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\CuentaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:43:43.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "SigrePyme\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\appsettings.Development.json",
+              "RelativeToolTip": "SigrePyme\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T11:38:13.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Details.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Producto\\Details.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Details.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Producto\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T12:14:00.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Services\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Services\\ProductoService.cs",
+              "RelativeToolTip": "SigrePyme\\Services\\ProductoService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA0wKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T14:08:38.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:43:42.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\ProductoRepository.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Repositories\\ProductoRepository.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Repositories\\ProductoRepository.cs",
+              "RelativeToolTip": "SigrePyme\\Repositories\\ProductoRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T14:11:43.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Index.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Producto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Producto\\Index.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Producto\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T14:18:06.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20260330120656_AddFechaCreacion.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
+              "RelativeToolTip": "SigrePyme\\Migrations\\20260330120656_AddFechaCreacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:06:56.429Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "SigrePyme\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:03:04.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20260330120822_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
+              "RelativeToolTip": "SigrePyme\\Migrations\\20260330120822_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:08:22.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "SigrePyme\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:46:10.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SigrePyme\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:02:58.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cuenta\\Login.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Cuenta\\Login.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Cuenta\\Login.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Cuenta\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T11:28:32.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SigrePyme\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "SigrePyme\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T11:26:17.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "SigrePyme\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:24:30.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "SigrePyme\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:45:17.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "SigrePyme\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "SigrePyme\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:20:48.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "RegistroViewModel.cs",
               "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\ViewModels\\RegistroViewModel.cs",
               "RelativeDocumentMoniker": "SigrePyme\\ViewModels\\RegistroViewModel.cs",
@@ -506,12 +622,11 @@
               "RelativeToolTip": "SigrePyme\\ViewModels\\RegistroViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T11:15:19.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T11:15:19.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "Roles.cs",
               "DocumentMoniker": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\Constants\\Roles.cs",
               "RelativeDocumentMoniker": "SigrePyme\\Constants\\Roles.cs",

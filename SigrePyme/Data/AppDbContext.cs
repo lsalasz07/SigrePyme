@@ -11,6 +11,7 @@ namespace SigrePyme.Data
         {
         }
 
+
         public DbSet<Producto> Productos { get; set; }
         public DbSet<TransaccionInventario> TransaccionesInventario { get; set; }
         public DbSet<Cliente> Clientes { get; set; }

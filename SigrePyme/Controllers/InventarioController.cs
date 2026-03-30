@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SigrePyme.Data;
+using SigrePyme.Models;
 using System;
 
 public class InventarioController : Controller
 {
-    private readonly ApplicationDbContext _context;
+    private readonly AppDbContext _context;
 
-    public InventarioController(ApplicationDbContext context)
+    public InventarioController(AppDbContext context)
     {
         _context = context;
     }
@@ -22,6 +24,9 @@ public class InventarioController : Controller
     public IActionResult Entrada(int id)
     {
         var producto = _context.Productos.Find(id);
+        if (producto == null)
+            return NotFound();
+
         return View(producto);
     }
 
@@ -30,15 +35,24 @@ public class InventarioController : Controller
     public IActionResult Entrada(int id, int cantidad)
     {
         var producto = _context.Productos.Find(id);
+        if (producto == null)
+            return NotFound();
 
-        producto.Stock += cantidad;
+        if (cantidad <= 0)
+        {
+            ModelState.AddModelError("", "La cantidad debe ser mayor a 0");
+            return View(producto);
+        }
 
-        _context.Movimientos.Add(new MovimientoInventario
+        producto.StockActual += cantidad;
+
+        _context.TransaccionesInventario.Add(new TransaccionInventario
         {
             ProductoId = id,
             Cantidad = cantidad,
-            TipoMovimiento = "ENTRADA",
-            Fecha = DateTime.Now
+            Tipo = TipoTransaccion.Entrada,
+            Fecha = DateTime.Now,
+            StockResultante = producto.StockActual
         });
 
         _context.SaveChanges();
@@ -49,6 +63,9 @@ public class InventarioController : Controller
     public IActionResult Salida(int id)
     {
         var producto = _context.Productos.Find(id);
+        if (producto == null)
+            return NotFound();
+
         return View(producto);
     }
 
@@ -57,23 +74,33 @@ public class InventarioController : Controller
     public IActionResult Salida(int id, int cantidad)
     {
         var producto = _context.Productos.Find(id);
+        if (producto == null)
+            return NotFound();
 
-        if (producto.Stock < cantidad)
+        if (cantidad <= 0)
+        {
+            ModelState.AddModelError("", "La cantidad debe ser mayor a 0");
+            return View(producto);
+        }
+
+        if (producto.StockActual < cantidad)
         {
             ModelState.AddModelError("", "Stock insuficiente");
             return View(producto);
         }
 
-        producto.Stock -= cantidad;
+        producto.StockActual -= cantidad;
 
-        _context.Movimientos.Add(new MovimientoInventario
+        _context.TransaccionesInventario.Add(new TransaccionInventario
         {
             ProductoId = id,
             Cantidad = cantidad,
-            TipoMovimiento = "SALIDA",
-            Fecha = DateTime.Now
+            Tipo = TipoTransaccion.Salida,
+            Fecha = DateTime.Now,
+            StockResultante = producto.StockActual
         });
 
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
+}
