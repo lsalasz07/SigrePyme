@@ -5,7 +5,7 @@
 
 <div class="container-fluid mt-4">
 
-
+    ```
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
             <h2 class="mb-0"><i class="bi bi-box-seam me-2"></i>Catálogo y Almacén</h2>
@@ -18,7 +18,6 @@
             </a>
         }
     </div>
-
 
     @if (TempData["Exito"] != null)
     {
@@ -35,7 +34,6 @@
         </div>
     }
 
-
     @if (ViewBag.CantidadAlertas > 0)
     {
         <div class="alert alert-warning d-flex align-items-center mb-3">
@@ -46,7 +44,7 @@
         </div>
     }
 
-
+    <!-- BUSCADOR -->
     <div class="card shadow-sm mb-3">
         <div class="card-body py-2">
             <div class="input-group">
@@ -57,7 +55,7 @@
         </div>
     </div>
 
-
+    <!-- TABLA -->
     <div class="card shadow-sm">
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -94,7 +92,6 @@
                                         @if (!string.IsNullOrEmpty(p.Descripcion))
                                         {
                                             <br />
-                                
                                             <small class="text-muted">@p.Descripcion</small>
                                         }
                                     </td>
@@ -107,7 +104,6 @@
                                         @if (p.TieneStockBajo)
                                         {
                                             <br />
-                                
                                             <small class="text-danger">Mín: @p.StockMinimo</small>
                                         }
                                     </td>
@@ -124,28 +120,28 @@
                                     <td class="text-center">
                                         <div class="btn-group btn-group-sm">
                                             <a asp-action="Details" asp-route-id="@p.Id"
-                                               class="btn btn-outline-info" title="Ver detalle">
+                                               class="btn btn-outline-info">
                                                 <i class="bi bi-eye"></i>
                                             </a>
                                             @if (User.IsInRole("Administrador") || User.IsInRole("Almacenista"))
                                             {
                                                 <a asp-action="Edit" asp-route-id="@p.Id"
-                                                   class="btn btn-outline-warning" title="Editar">
+                                                   class="btn btn-outline-warning">
                                                     <i class="bi bi-pencil"></i>
                                                 </a>
                                                 <a asp-action="RegistrarMovimiento" asp-route-id="@p.Id"
-                                                   class="btn btn-outline-primary" title="Registrar movimiento">
+                                                   class="btn btn-outline-primary">
                                                     <i class="bi bi-arrow-left-right"></i>
                                                 </a>
                                             }
                                             <a asp-action="Transacciones" asp-route-id="@p.Id"
-                                               class="btn btn-outline-secondary" title="Historial">
+                                               class="btn btn-outline-secondary">
                                                 <i class="bi bi-clock-history"></i>
                                             </a>
                                             @if (User.IsInRole("Administrador"))
                                             {
                                                 <a asp-action="Delete" asp-route-id="@p.Id"
-                                                   class="btn btn-outline-danger" title="Eliminar">
+                                                   class="btn btn-outline-danger">
                                                     <i class="bi bi-trash"></i>
                                                 </a>
                                             }
@@ -159,44 +155,84 @@
             </div>
         </div>
     </div>
+    ```
+
 </div>
 
 @section Scripts {
+
     <script>
         const buscador = document.getElementById('buscador');
-        const tabla    = document.getElementById('tablaProductos').querySelector('tbody');
+        const tabla = document.getElementById('tablaProductos').querySelector('tbody');
+
+        const tablaOriginal = tabla.innerHTML;
+
+        let timeout = null;
 
         buscador.addEventListener('input', function () {
-            const q = this.value.trim();
-            if (q.length < 2) { location.reload(); return; }
+            clearTimeout(timeout);
 
-            fetch(`/Producto/BuscarJson?q=${encodeURIComponent(q)}`)
-                .then(r => r.json())
-                .then(data => {
-                    if (data.length === 0) {
-                        tabla.innerHTML = `<tr><td colspan="7" class="text-center text-muted py-4">
-                            Sin resultados para "<strong>${q}</strong>".</td></tr>`;
-                        return;
-                    }
-                    tabla.innerHTML = data.map(p => `
-                        <tr>
-                            <td><code class="text-primary fw-semibold">${p.sku}</code></td>
-                            <td><strong>${p.nombre}</strong></td>
-                            <td class="text-end">—</td>
-                            <td class="text-end">₡${parseFloat(p.precioVenta).toFixed(2)}</td>
-                            <td class="text-center">
-                                <span class="badge ${p.stockActual <= 5 ? 'bg-danger' : 'bg-success'} fs-6">
-                                    ${p.stockActual}
-                                </span>
-                            </td>
-                            <td class="text-center"><span class="badge bg-success">Activo</span></td>
-                            <td class="text-center">
-                                <a href="/Producto/Details/${p.id}" class="btn btn-sm btn-outline-info">
-                                    <i class="bi bi-eye"></i>
-                                </a>
-                            </td>
-                        </tr>`).join('');
-                });
+            timeout = setTimeout(() => {
+                const q = this.value.trim();
+
+                if (q.length < 2) {
+                    tabla.innerHTML = tablaOriginal;
+                    return;
+                }
+
+                fetch(`/Producto/BuscarJson?q=${encodeURIComponent(q)}`)
+                    .then(r => r.json())
+                    .then(data => {
+                        if (data.length === 0) {
+                            tabla.innerHTML = `<tr>
+                                <td colspan="7" class="text-center text-muted py-4">
+                                Sin resultados para "<strong>${q}</strong>"
+                                </td>
+                            </tr>`;
+                            return;
+                        }
+
+                        tabla.innerHTML = data.map(p => `
+                            <tr class="${p.tieneStockBajo ? 'table-warning' : ''}">
+                                <td><code class="text-primary fw-semibold">${p.sku}</code></td>
+                                <td><strong>${p.nombre}</strong></td>
+                                <td class="text-end">—</td>
+                                <td class="text-end">₡${parseFloat(p.precioVenta).toFixed(2)}</td>
+                                <td class="text-center">
+                                    <span class="badge ${p.tieneStockBajo ? 'bg-danger' : 'bg-success'} fs-6">
+                                        ${p.stockActual}
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge ${p.activo ? 'bg-success' : 'bg-secondary'}">
+                                        ${p.activo ? 'Activo' : 'Inactivo'}
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="/Producto/Details/${p.id}" class="btn btn-outline-info">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a href="/Producto/Edit/${p.id}" class="btn btn-outline-warning">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a href="/Producto/RegistrarMovimiento/${p.id}" class="btn btn-outline-primary">
+                                            <i class="bi bi-arrow-left-right"></i>
+                                        </a>
+                                        <a href="/Producto/Transacciones/${p.id}" class="btn btn-outline-secondary">
+                                            <i class="bi bi-clock-history"></i>
+                                        </a>
+                                        <a href="/Producto/Delete/${p.id}" class="btn btn-outline-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        `).join('');
+                    });
+
+            }, 300);
         });
     </script>
+
 }

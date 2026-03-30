@@ -4,24 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using SigrePyme.Models;
 using SigrePyme.ViewModels;
 
+
 namespace SigrePyme.Controllers
 {
-    public class CuentaController : Controller
+    public class CuentaController(
+        UserManager<ApplicationUser> userManager,
+        SignInManager<ApplicationUser> signInManager,
+        RoleManager<IdentityRole> roleManager) : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-
-        public CuentaController(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
-            RoleManager<IdentityRole> roleManager)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _roleManager = roleManager;
-        }
-
         [HttpGet]
         public IActionResult Registro()
         {
@@ -43,22 +33,22 @@ namespace SigrePyme.Controllers
                 UserName = modelo.Correo,
                 Email = modelo.Correo,
                 NombreCompleto = modelo.NombreCompleto,
-                FechaCreacion = DateTime.Now
+                FechaCreacion = DateTime.Now 
             };
 
-            var resultado = await _userManager.CreateAsync(usuario, modelo.Contrasena);
+            var resultado = await userManager.CreateAsync(usuario, modelo.Contrasena);
 
             if (resultado.Succeeded)
             {
-                if (!await _roleManager.RoleExistsAsync(modelo.Rol))
+                if (!await roleManager.RoleExistsAsync(modelo.Rol))
                 {
                     ModelState.AddModelError(string.Empty, "El rol seleccionado no existe.");
                     return View(modelo);
                 }
 
-                await _userManager.AddToRoleAsync(usuario, modelo.Rol);
+                await userManager.AddToRoleAsync(usuario, modelo.Rol);
 
-                await _signInManager.SignInAsync(usuario, isPersistent: false);
+                await signInManager.SignInAsync(usuario, isPersistent: false);
 
                 TempData["Exito"] = $"¡Bienvenido/a {usuario.NombreCompleto}! Su cuenta ha sido creada exitosamente.";
                 return RedirectToAction("Index", "Home");
@@ -84,14 +74,14 @@ namespace SigrePyme.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel modelo, string? returnUrl = null)
+        public async Task<IActionResult> Login(Modelovistalogin modelo, string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
 
             if (!ModelState.IsValid)
                 return View(modelo);
 
-            var resultado = await _signInManager.PasswordSignInAsync(
+            var resultado = await signInManager.PasswordSignInAsync(
                 modelo.Correo,
                 modelo.Contrasena,
                 modelo.Recordarme,
@@ -127,7 +117,7 @@ namespace SigrePyme.Controllers
         [Authorize]
         public async Task<IActionResult> CerrarSesion()
         {
-            await _signInManager.SignOutAsync();
+            await signInManager.SignOutAsync();
             return RedirectToAction("Login", "Cuenta");
         }
 

@@ -63,5 +63,23 @@ namespace SigrePyme.Repositories
         {
             await _context.SaveChangesAsync();
         }
+        public async Task<IEnumerable<Producto>> BuscarAsync(string q)
+        {
+            var query = _context.Productos.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(q))
+            {
+                query = query.Where(p =>
+                    p.Nombre.Contains(q) ||
+                    p.SKU.Contains(q));
+            }
+
+            return await query
+                .Where(p => p.Activo)
+                .OrderBy(p => p.Nombre)
+                .Take(10)
+                .ToListAsync();
+        }
+
     }
 }

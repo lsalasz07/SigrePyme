@@ -2,7 +2,7 @@
 
 namespace SigrePyme.ViewModels
 {
-    public class LoginViewModel
+    public class Modelovistalogin
     {
         [Required(ErrorMessage = "El correo electrónico es obligatorio.")]
         [EmailAddress(ErrorMessage = "Ingrese un correo electrónico válido.")]

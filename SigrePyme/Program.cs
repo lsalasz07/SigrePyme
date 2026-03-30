@@ -76,8 +76,8 @@ using (var scope = app.Services.CreateScope())
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    await db.Database.MigrateAsync();
-    await DbInitializer.InicializarAsync(userManager, roleManager);
+   // await db.Database.MigrateAsync();
+    //await DbInitializer.InicializarAsync(userManager, roleManager);
 }
 
 // =============================================
@@ -101,3 +101,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

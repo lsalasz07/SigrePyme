@@ -2042,23 +2042,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luisi\\.nuget\\packages\\": {},
+    "C:\\Users\\nigel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
+      "projectUniqueName": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
       "projectName": "SigrePyme",
-      "projectPath": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
-      "packagesPath": "C:\\Users\\luisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\obj\\",
+      "projectPath": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
+      "packagesPath": "C:\\Users\\nigel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\luisi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nigel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

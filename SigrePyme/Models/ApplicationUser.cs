@@ -6,5 +6,6 @@ namespace SigrePyme.Models
     {
         public string NombreCompleto { get; set; } = string.Empty;
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
+        public DateTime FechaCreacion { get; set; } = DateTime.Now;
     }
 }

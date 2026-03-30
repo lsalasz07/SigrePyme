@@ -156,5 +156,10 @@ namespace SigrePyme.Services
 
             return (true, $"Transacción registrada correctamente. Stock actual: {producto.StockActual}.{alerta}");
         }
+        public async Task<IEnumerable<Producto>> BuscarAsync(string q)
+        {
+            return await _productoRepo.BuscarAsync(q);
+        }
+
     }
 }

@@ -5,25 +5,18 @@ using SigrePyme.Constants;
 using SigrePyme.Models;
 using SigrePyme.Services;
 
-namespace SIGRE_PYME.Controllers
+namespace SigrePyme.Controllers
 {
 
     [Authorize]
-    public class ProductoController : Controller
+    public class ProductoController(IProductoService productoService) : Controller
     {
-        private readonly IProductoService _productoService;
-
-        public ProductoController(IProductoService productoService)
-        {
-            _productoService = productoService;
-        }
-
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var productos = await _productoService.ObtenerTodosAsync();
+            var productos = await productoService.ObtenerTodosAsync();
 
-            var alertas = await _productoService.ObtenerConStockBajoAsync();
+            var alertas = await productoService.ObtenerConStockBajoAsync();
             ViewBag.CantidadAlertas = alertas.Count();
 
             return View(productos);
@@ -32,7 +25,7 @@ namespace SIGRE_PYME.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var producto = await _productoService.ObtenerPorIdAsync(id);
+            var producto = await productoService.ObtenerPorIdAsync(id);
             if (producto == null)
             {
                 TempData["Error"] = "Producto no encontrado.";
@@ -57,7 +50,7 @@ namespace SIGRE_PYME.Controllers
             if (!ModelState.IsValid)
                 return View(vm);
 
-            var (exito, mensaje) = await _productoService.CrearAsync(vm);
+            var (exito, mensaje) = await productoService.CrearAsync(vm);
 
             if (!exito)
             {
@@ -73,7 +66,7 @@ namespace SIGRE_PYME.Controllers
         [Authorize(Roles = $"{Roles.Administrador},{Roles.Almacenista}")]
         public async Task<IActionResult> Edit(int id)
         {
-            var producto = await _productoService.ObtenerPorIdAsync(id);
+            var producto = await productoService.ObtenerPorIdAsync(id);
             if (producto == null)
             {
                 TempData["Error"] = "Producto no encontrado.";
@@ -104,7 +97,7 @@ namespace SIGRE_PYME.Controllers
             if (!ModelState.IsValid)
                 return View(vm);
 
-            var (exito, mensaje) = await _productoService.EditarAsync(vm);
+            var (exito, mensaje) = await productoService.EditarAsync(vm);
 
             if (!exito)
             {
@@ -120,7 +113,7 @@ namespace SIGRE_PYME.Controllers
         [Authorize(Roles = Roles.Administrador)]
         public async Task<IActionResult> Delete(int id)
         {
-            var producto = await _productoService.ObtenerPorIdAsync(id);
+            var producto = await productoService.ObtenerPorIdAsync(id);
             if (producto == null)
             {
                 TempData["Error"] = "Producto no encontrado.";
@@ -135,7 +128,7 @@ namespace SIGRE_PYME.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var (exito, mensaje) = await _productoService.EliminarAsync(id);
+            var (exito, mensaje) = await productoService.EliminarAsync(id);
 
             if (!exito)
                 TempData["Error"] = mensaje;
@@ -148,14 +141,14 @@ namespace SIGRE_PYME.Controllers
         [HttpGet]
         public async Task<IActionResult> Transacciones(int id)
         {
-            var producto = await _productoService.ObtenerPorIdAsync(id);
+            var producto = await productoService.ObtenerPorIdAsync(id);
             if (producto == null)
             {
                 TempData["Error"] = "Producto no encontrado.";
                 return RedirectToAction(nameof(Index));
             }
 
-            var historial = await _productoService.ObtenerHistorialAsync(id);
+            var historial = await productoService.ObtenerHistorialAsync(id);
 
             ViewBag.Producto = producto;
             return View(historial);
@@ -165,7 +158,7 @@ namespace SIGRE_PYME.Controllers
         [Authorize(Roles = $"{Roles.Administrador},{Roles.Almacenista}")]
         public async Task<IActionResult> RegistrarMovimiento(int id)
         {
-            var producto = await _productoService.ObtenerPorIdAsync(id);
+            var producto = await productoService.ObtenerPorIdAsync(id);
             if (producto == null)
             {
                 TempData["Error"] = "Producto no encontrado.";
@@ -195,7 +188,7 @@ namespace SIGRE_PYME.Controllers
             }
 
             var usuarioEmail = User.Identity?.Name ?? "Desconocido";
-            var (exito, mensaje) = await _productoService.RegistrarTransaccionAsync(vm, usuarioEmail);
+            var (exito, mensaje) = await productoService.RegistrarTransaccionAsync(vm, usuarioEmail);
 
             if (!exito)
             {
@@ -211,21 +204,18 @@ namespace SIGRE_PYME.Controllers
         [HttpGet]
         public async Task<IActionResult> BuscarJson(string q)
         {
-            var todos = await _productoService.ObtenerTodosAsync();
+            var productos = await productoService.BuscarAsync(q);
 
-            var resultado = todos
-                .Where(p => string.IsNullOrEmpty(q) ||
-                            p.Nombre.Contains(q, StringComparison.OrdinalIgnoreCase) ||
-                            p.SKU.Contains(q, StringComparison.OrdinalIgnoreCase))
-                .Take(10)
-                .Select(p => new
-                {
-                    p.Id,
-                    p.SKU,
-                    p.Nombre,
-                    p.PrecioVenta,
-                    p.StockActual
-                });
+            var resultado = productos.Select(p => new
+            {
+                id = p.Id,
+                sku = p.SKU,
+                nombre = p.Nombre,
+                precioVenta = p.PrecioVenta,
+                stockActual = p.StockActual,
+                activo = p.Activo,               
+                tieneStockBajo = p.TieneStockBajo 
+            });
 
             return Json(resultado);
         }

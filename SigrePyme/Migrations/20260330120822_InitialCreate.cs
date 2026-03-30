@@ -43,6 +43,7 @@ namespace SigrePyme.Migrations
                     NombreCompleto = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     FechaRegistro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
@@ -69,6 +70,31 @@ namespace SigrePyme.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Clientes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NombreCompleto = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Email = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Telefono = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Direccion = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Empresa = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Activo = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    FechaRegistro = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Clientes", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -290,6 +316,12 @@ namespace SigrePyme.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Clientes_Email",
+                table: "Clientes",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Productos_SKU",
                 table: "Productos",
                 column: "SKU",
@@ -318,6 +350,9 @@ namespace SigrePyme.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "TransaccionesInventario");

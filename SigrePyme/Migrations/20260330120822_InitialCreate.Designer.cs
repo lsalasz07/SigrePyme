@@ -12,8 +12,8 @@ using SigrePyme.Data;
 namespace SigrePyme.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260328182103_AgregarClientes")]
-    partial class AgregarClientes
+    [Migration("20260330120822_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -175,6 +175,9 @@ namespace SigrePyme.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime(6)");

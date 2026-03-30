@@ -173,6 +173,9 @@ namespace SigrePyme.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime(6)");
 

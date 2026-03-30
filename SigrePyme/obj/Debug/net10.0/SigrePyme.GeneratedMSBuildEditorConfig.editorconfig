@@ -19,113 +19,125 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = SigrePyme
 build_property.RootNamespace = SigrePyme
-build_property.ProjectDir = C:\Users\luisi\source\repos\SigrePyme\SigrePyme\
+build_property.ProjectDir = C:\Users\nigel\source\repos\tarea2\SigrePyme\SigrePyme\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\luisi\source\repos\SigrePyme\SigrePyme
+build_property.MSBuildProjectDirectory = C:\Users\nigel\source\repos\tarea2\SigrePyme\SigrePyme
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Account/AccesoDenegado.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Account/AccesoDenegado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc29EZW5lZ2Fkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Account/ListarUsuarios.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Account/ListarUsuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMaXN0YXJVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Account/Login.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Account/Register.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Cliente/Create.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cliente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Cliente/Delete.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cliente/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Cliente/Details.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cliente/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Cliente/Edit.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cliente/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Cliente/Index.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cliente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Home/Index.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cuenta/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhXEFjY2Vzb0RlbmVnYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cuenta/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Cuenta/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Home/Privacy.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Create.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Delete.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Details.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Edit.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Index.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/RegistrarMovimiento.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/RegistrarMovimiento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cUmVnaXN0cmFyTW92aW1pZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Producto/Transacciones.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Producto/Transacciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cVHJhbnNhY2Npb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Shared/Error.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Shared/_LayoutAuth.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Shared/_LayoutAuth.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/_ViewImports.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/_ViewStart.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luisi/source/repos/SigrePyme/SigrePyme/Views/Shared/_Layout.cshtml]
+[C:/Users/nigel/source/repos/tarea2/SigrePyme/SigrePyme/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-z47oyrc18a
