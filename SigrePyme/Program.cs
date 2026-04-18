@@ -60,24 +60,18 @@ builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 
-// =============================================
-// MVC
-// =============================================
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// =============================================
-// SEED
-// =============================================
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-   // await db.Database.MigrateAsync();
-    //await DbInitializer.InicializarAsync(userManager, roleManager);
+    await db.Database.MigrateAsync();
+    await DbInitializer.InicializarAsync(userManager, roleManager);
 }
 
 // =============================================
@@ -96,9 +90,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapControllers();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-

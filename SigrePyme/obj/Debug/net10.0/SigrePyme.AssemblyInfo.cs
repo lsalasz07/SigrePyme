@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SigrePyme")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4715a7c7b749466181ba8858eb90a059342a407e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SigrePyme")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SigrePyme")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,39 +1,298 @@
 @{
     ViewData["Title"] = "Inicio";
+    bool esDashboard = User.IsInRole("Administrador") || User.IsInRole("Gerente");
 }
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <i class="bi bi-building text-primary" style="font-size:4rem;"></i>
-            <h1 class="mt-3 fw-bold">SIGRE-PYME</h1>
-            <p class="lead text-muted">Sistema Integral de Gestión de Recursos para PYMES</p>
-            <hr />
-            <div class="row g-3 mt-2">
-                <div class="col-md-4">
-                    <a asp-controller="Producto" asp-action="Index"
-                       class="card text-decoration-none h-100 shadow-sm border-0">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-box-seam text-primary" style="font-size:2.5rem;"></i>
-                            <h5 class="mt-2">Catálogo</h5>
-                            <p class="text-muted small">Gestión de productos e inventario</p>
+@if (esDashboard)
+{
+    <div class="container-fluid mt-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="bi bi-speedometer2 me-2"></i>Dashboard</h2>
+            <button class="btn btn-outline-primary btn-sm" onclick="cargarDashboard()">
+                <i class="bi bi-arrow-clockwise me-1"></i>Actualizar
+            </button>
+        </div>
+
+        <div id="spinner" class="text-center py-5">
+            <div class="spinner-border text-primary"></div>
+            <p class="mt-2 text-muted">Cargando...</p>
+        </div>
+
+        <div id="contenido" class="d-none">
+
+            <div class="row g-3 mb-4">
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-primary bg-opacity-10 p-3">
+                                <i class="bi bi-box-seam text-primary fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted small mb-0">Total Productos</p>
+                                <h3 class="fw-bold mb-0" id="totalProductos">—</h3>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                @if (User.IsInRole("Administrador"))
-                {
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-danger bg-opacity-10 p-3">
+                                <i class="bi bi-exclamation-triangle text-danger fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted small mb-0">Stock Bajo</p>
+                                <h3 class="fw-bold mb-0 text-danger" id="stockBajo">—</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-success bg-opacity-10 p-3">
+                                <i class="bi bi-people text-success fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted small mb-0">Total Clientes</p>
+                                <h3 class="fw-bold mb-0" id="totalClientes">—</h3>
+                                <small class="text-success" id="clientesNuevos"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-warning bg-opacity-10 p-3">
+                                <i class="bi bi-trophy text-warning fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted small mb-0">Producto más activo</p>
+                                <p class="fw-bold mb-0 small" id="productoTop">—</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row g-3 mb-4">
+
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-white">
+                            <h6 class="mb-0">
+                                <i class="bi bi-bar-chart me-2 text-primary"></i>
+                                Movimientos del mes
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="grafico" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-white">
+                            <h6 class="mb-0">
+                                <i class="bi bi-exclamation-circle me-2 text-danger"></i>
+                                Productos con stock bajo
+                            </h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-sm table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>SKU</th>
+                                        <th>Producto</th>
+                                        <th class="text-center">Stock</th>
+                                        <th class="text-center">Mínimo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaStockBajo"></tbody>
+                            </table>
+                            <p id="sinStock" class="text-center text-muted py-3 d-none">
+                                <i class="bi bi-check-circle text-success me-1"></i>
+                                Todo el stock está bien.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white">
+                    <h6 class="mb-0">
+                        <i class="bi bi-clock-history me-2"></i>
+                        Últimos movimientos de inventario
+                    </h6>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Producto</th>
+                                    <th class="text-center">Tipo</th>
+                                    <th class="text-center">Cantidad</th>
+                                    <th class="text-center">Stock resultante</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaMovimientos"></tbody>
+                        </table>
+                    </div>
+                    <p id="sinMovimientos" class="text-center text-muted py-3 d-none">
+                        No hay movimientos registrados aún.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div id="error" class="alert alert-danger d-none">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            No se pudieron cargar los datos. Intente actualizar.
+        </div>
+
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <i class="bi bi-building text-primary" style="font-size:4rem;"></i>
+                <h1 class="mt-3 fw-bold">SIGRE-PYME</h1>
+                <p class="lead text-muted">Sistema Integral de Gestión de Recursos para PYMES</p>
+                <hr />
+                <div class="row g-3 mt-2">
                     <div class="col-md-4">
-                        <a asp-controller="Account" asp-action="ListarUsuarios"
-                           class="card text-decoration-none h-100 shadow-sm border-0">
+                        <a asp-controller="Producto" asp-action="Index"
+                               class="card text-decoration-none h-100 shadow-sm border-0">
                             <div class="card-body text-center py-4">
-                                <i class="bi bi-people text-success" style="font-size:2.5rem;"></i>
-                                <h5 class="mt-2">Usuarios</h5>
-                                <p class="text-muted small">Gestión de accesos y roles</p>
+                                <i class="bi bi-box-seam text-primary" style="font-size:2.5rem;"></i>
+                                <h5 class="mt-2">Catálogo</h5>
+                                <p class="text-muted small">Gestión de productos e inventario</p>
                             </div>
                         </a>
                     </div>
-                }
+                    @if (User.IsInRole("Administrador"))
+                    {
+                        <div class="col-md-4">
+                            <a asp-controller="Account" asp-action="ListarUsuarios"
+                                   class="card text-decoration-none h-100 shadow-sm border-0">
+                                <div class="card-body text-center py-4">
+                                    <i class="bi bi-people text-success" style="font-size:2.5rem;"></i>
+                                    <h5 class="mt-2">Usuarios</h5>
+                                    <p class="text-muted small">Gestión de accesos y roles</p>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-</div>
+}
+
+@section Scripts {
+    @if (esDashboard)
+    {
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+        <script>
+            let grafico = null;
+
+            async function cargarDashboard() {
+            document.getElementById('spinner').classList.remove('d-none');
+            document.getElementById('contenido').classList.add('d-none');
+            document.getElementById('error').classList.add('d-none');
+
+            try {
+            const respuesta = await fetch('/api/dashboard/kpis');
+            const datos     = await respuesta.json();
+
+            document.getElementById('totalProductos').textContent = datos.totalProductos;
+            document.getElementById('stockBajo').textContent      = datos.cantidadStockBajo;
+            document.getElementById('totalClientes').textContent  = datos.totalClientes;
+            document.getElementById('productoTop').textContent    = datos.productoMasMovimientos;
+
+            if (datos.clientesNuevosEsteMes > 0)
+            document.getElementById('clientesNuevos').textContent = `+${datos.clientesNuevosEsteMes} este mes`;
+
+            const ctx = document.getElementById('grafico').getContext('2d');
+            if (grafico) grafico.destroy();
+            grafico = new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['Entradas del mes', 'Salidas del mes'],
+            datasets: [{
+            data: [datos.entradasEsteMes, datos.salidasEsteMes],
+            backgroundColor: ['rgba(40,167,69,0.7)', 'rgba(220,53,69,0.7)'],
+            borderRadius: 6
+            }]
+            },
+            options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+            }
+            });
+
+            const tbStock = document.getElementById('tablaStockBajo');
+            if (datos.productosStockBajo.length === 0) {
+            tbStock.innerHTML = '';
+            document.getElementById('sinStock').classList.remove('d-none');
+            } else {
+            document.getElementById('sinStock').classList.add('d-none');
+            tbStock.innerHTML = datos.productosStockBajo.map(p => `
+            <tr>
+            <td><code class="text-primary">${p.sku}</code></td>
+            <td>${p.nombre}</td>
+            <td class="text-center"><span class="badge bg-danger">${p.stockActual}</span></td>
+            <td class="text-center text-muted">${p.stockMinimo}</td>
+            </tr>`).join('');
+            }
+
+            const tbMov = document.getElementById('tablaMovimientos');
+            if (datos.movimientosRecientes.length === 0) {
+            tbMov.innerHTML = '';
+            document.getElementById('sinMovimientos').classList.remove('d-none');
+            } else {
+            document.getElementById('sinMovimientos').classList.add('d-none');
+            tbMov.innerHTML = datos.movimientosRecientes.map(m => {
+            const color = m.tipo === 'Entrada' ? 'bg-success'
+            : m.tipo === 'Salida'  ? 'bg-danger'
+            : 'bg-warning text-dark';
+            const signo = m.tipo === 'Entrada' ? '+' : '-';
+            return `
+            <tr>
+            <td>${m.fecha}</td>
+            <td>${m.producto}</td>
+            <td class="text-center"><span class="badge ${color}">${m.tipo}</span></td>
+            <td class="text-center fw-bold">${signo}${m.cantidad}</td>
+            <td class="text-center"><span class="badge bg-secondary">${m.stock}</span></td>
+            </tr>`;
+            }).join('');
+            }
+
+            document.getElementById('contenido').classList.remove('d-none');
+
+            } catch {
+            document.getElementById('error').classList.remove('d-none');
+            } finally {
+            document.getElementById('spinner').classList.add('d-none');
+            }
+            }
+
+            document.addEventListener('DOMContentLoaded', cargarDashboard);
+        </script>
+    }
+}

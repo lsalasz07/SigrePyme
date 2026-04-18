@@ -2042,23 +2042,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nigel\\.nuget\\packages\\": {},
+    "C:\\Users\\luisi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
+      "projectUniqueName": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
       "projectName": "SigrePyme",
-      "projectPath": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
-      "packagesPath": "C:\\Users\\nigel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nigel\\source\\repos\\tarea2\\SigrePyme\\SigrePyme\\obj\\",
+      "projectPath": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\SigrePyme.csproj",
+      "packagesPath": "C:\\Users\\luisi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luisi\\source\\repos\\SigrePyme\\SigrePyme\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\nigel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luisi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2085,7 +2085,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -2129,7 +2129,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "SigrePyme.Controllers.DashboardController",
+    "Method": "ObtenerKpis",
+    "RelativePath": "api/dashboard/kpis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
